@@ -1,0 +1,40 @@
+name: tcmb
+
+topology:
+  nodes:
+
+    FW:  
+      kind: nokia_srsim
+      type: SR-1e
+      image: nokia-srsim:25.7.R2
+      license: srsim_license_25_7
+      components:
+        - slot: A
+          env:
+            NOKIA_SROS_CARD: cpm-e
+        - slot: 1
+          env:
+            NOKIA_SROS_CARD: iom-e
+            NOKIA_SROS_MDA_1: me10-10gb-sfp+
+
+
+    d2l-leaf1:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux:latest
+      type: ixrd2l
+
+
+    d2l-leaf2:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux:latest
+      type: ixrd2l
+
+    d2l-spine1:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux:latest
+      type: ixrd2l
+  links:
+    - endpoints: [ d2l-leaf1:e1-1, d2l-spine1:e1-1 ]
+    - endpoints: [ d2l-leaf2:e1-1, d2l-spine1:e1-2 ]
+    - endpoints: [ d2l-leaf1:e1-2, FW:1/1/c1/1 ]
+    - endpoints: [ d2l-leaf2:e1-2, FW:1/1/c2/1 ]

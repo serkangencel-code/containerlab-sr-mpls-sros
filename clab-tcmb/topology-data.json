@@ -1,0 +1,204 @@
+{
+  "name": "tcmb",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-79b08be7df79",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "FW-a": {
+      "index": "0",
+      "shortname": "FW-a",
+      "longname": "clab-tcmb-FW-a",
+      "fqdn": "FW-a.tcmb.io",
+      "group": "",
+      "labdir": "/home/sgencel/clab33/clab-tcmb/FW",
+      "kind": "nokia_srsim",
+      "image": "nokia-srsim:25.7.R2",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1c:14:00:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-79b08be7df79",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srsim",
+        "clab-node-lab-dir": "/home/sgencel/clab33/clab-tcmb/FW",
+        "clab-node-longname": "clab-tcmb-FW",
+        "clab-node-name": "FW",
+        "clab-node-type": "SR-1e",
+        "clab-owner": "sgencel",
+        "clab-topo-file": "/home/sgencel/clab33/tcmb.pbf.clab.yml",
+        "containerlab": "tcmb"
+      },
+      "port-bindings": [
+      ]
+    },
+    "d2l-leaf1": {
+      "index": "1",
+      "shortname": "d2l-leaf1",
+      "longname": "clab-tcmb-d2l-leaf1",
+      "fqdn": "d2l-leaf1.tcmb.io",
+      "group": "",
+      "labdir": "/home/sgencel/clab33/clab-tcmb/d2l-leaf1",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:e4:01:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-79b08be7df79",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/sgencel/clab33/clab-tcmb/d2l-leaf1",
+        "clab-node-longname": "clab-tcmb-d2l-leaf1",
+        "clab-node-name": "d2l-leaf1",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "sgencel",
+        "clab-topo-file": "/home/sgencel/clab33/tcmb.pbf.clab.yml",
+        "containerlab": "tcmb"
+      },
+      "port-bindings": [
+      ]
+    },
+    "d2l-leaf2": {
+      "index": "2",
+      "shortname": "d2l-leaf2",
+      "longname": "clab-tcmb-d2l-leaf2",
+      "fqdn": "d2l-leaf2.tcmb.io",
+      "group": "",
+      "labdir": "/home/sgencel/clab33/clab-tcmb/d2l-leaf2",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:d4:02:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-79b08be7df79",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/sgencel/clab33/clab-tcmb/d2l-leaf2",
+        "clab-node-longname": "clab-tcmb-d2l-leaf2",
+        "clab-node-name": "d2l-leaf2",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "sgencel",
+        "clab-topo-file": "/home/sgencel/clab33/tcmb.pbf.clab.yml",
+        "containerlab": "tcmb"
+      },
+      "port-bindings": [
+      ]
+    },
+    "d2l-spine1": {
+      "index": "3",
+      "shortname": "d2l-spine1",
+      "longname": "clab-tcmb-d2l-spine1",
+      "fqdn": "d2l-spine1.tcmb.io",
+      "group": "",
+      "labdir": "/home/sgencel/clab33/clab-tcmb/d2l-spine1",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:7d:03:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-79b08be7df79",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/sgencel/clab33/clab-tcmb/d2l-spine1",
+        "clab-node-longname": "clab-tcmb-d2l-spine1",
+        "clab-node-name": "d2l-spine1",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "sgencel",
+        "clab-topo-file": "/home/sgencel/clab33/tcmb.pbf.clab.yml",
+        "containerlab": "tcmb"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "d2l-leaf1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:c4:00:95",
+        "peer": "z"
+      },
+      "z": {
+        "node": "d2l-spine1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:16:fe:b3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "d2l-leaf2",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:14:92:d9",
+        "peer": "z"
+      },
+      "z": {
+        "node": "d2l-spine1",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:93:1c:1e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "d2l-leaf1",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:e5:74:18",
+        "peer": "z"
+      },
+      "z": {
+        "node": "FW-a",
+        "interface": "e1-1-c1-1",
+        "mac": "aa:c1:ab:c9:83:ec",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "d2l-leaf2",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:c1:0a:c4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "FW-a",
+        "interface": "e1-1-c2-1",
+        "mac": "aa:c1:ab:11:ce:c0",
+        "peer": "a"
+      }
+    }
+  ]
+}
